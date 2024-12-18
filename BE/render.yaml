@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: task-planner-backend
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: MONGO_URL
+        value: your-mongodb-url
